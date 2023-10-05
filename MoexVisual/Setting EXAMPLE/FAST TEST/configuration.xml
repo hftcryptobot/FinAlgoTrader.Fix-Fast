@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="configuration_html.xsl" type="text/xsl"?>
+<configuration type="Test" label="Test System" marketId="MOEX">
+
+	<ConfigTemplates>
+		<connection>
+			<type>Incremental</type>
+			<!-- Traffic shaping is disabled -->
+			<maxKbps>128</maxKbps>
+		</connection>
+		<connection>
+			<type>Snapshot</type>
+			<maxKbps>16</maxKbps>
+		</connection>
+	</ConfigTemplates>
+	
+
+   <MarketDataGroup feedType="Orders Incremental" marketID="I" label="orders incremental">
+		<connections>
+			<connection>
+				<type>Incremental</type>
+				<protocol>UDP/IP</protocol>
+				<src-ip>91.203.253.238</src-ip>
+				<ip>239.195.1.71</ip>
+				<port>16071</port>
+				<feed>A</feed>
+				<maxKbps>128</maxKbps>
+			</connection>
+			<connection>
+				<type>Incremental</type>
+				<protocol>UDP/IP</protocol>
+				<src-ip>91.203.255.238</src-ip>
+				<ip>239.195.1.199</ip>
+				<port>17071</port>
+				<feed>B</feed>
+				<maxKbps>128</maxKbps>
+			</connection>
+         </connections>
+	</MarketDataGroup>
+	
+	
+	
+</configuration>

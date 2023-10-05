@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Configurations>Debug;Release;Debug2</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Apex">
+      <HintPath>..\libraries\Apex.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FinAlgoTrader.Fast">
+      <HintPath>..\libraries\FinAlgoTrader.Fast.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FinAlgoTrader.Fix">
+      <HintPath>..\libraries\FinAlgoTrader.Fix.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\libraries\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenFAST">
+      <HintPath>..\libraries\OpenFAST.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QuickFix">
+      <HintPath>..\libraries\QuickFix.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SBE">
+      <HintPath>..\libraries\SBE.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="settings.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="templates.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
